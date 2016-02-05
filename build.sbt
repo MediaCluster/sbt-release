@@ -1,6 +1,6 @@
 lazy val `sbt-release` = project in file(".")
 
-organization := "com.github.gseitz"
+organization := "de.mediacluster.sbt"
 name := "sbt-release"
 
 homepage := Some(url("https://github.com/sbt/sbt-release"))
@@ -21,10 +21,10 @@ scriptedLaunchOpts <<= (scriptedLaunchOpts, version) { case (s,v) => s ++
 scriptedBufferLog := false
 
 // Bintray
-bintrayOrganization := Some("sbt")
-bintrayRepository := "sbt-plugin-releases"
+bintrayOrganization := Some("mediacluster")
+bintrayRepository := "sbt-plugins"
 bintrayPackage := "sbt-release"
-bintrayReleaseOnPublish := false
+bintrayReleaseOnPublish := true
 
 // Release
 import ReleaseTransformations._
